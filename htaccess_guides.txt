@@ -18,13 +18,13 @@ RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 </IfModule>
 
-//SEO : Redirect Public IP Address to website domain
+//SEO : Redirect site to www URL
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
-RewriteCond %{HTTP_HOST} ^ohphilippines.com [NC]
-RewriteRule ^(.*)$ http://www.ohphilippines.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^domain.com [NC]
+RewriteRule ^(.*)$ http://www.domain.com/$1 [L,R=301]
 </IfModule>
 
 //SEO : Redirect Public IP Address to website domain
